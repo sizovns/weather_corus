@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Request</h1>
+<!--
+<form action="#" th:action="@{/signIn}" th:object="${user}" method="post">
+    <p>Entry ur login: <label>
+        <input type="text" th:field="*{login}"/>
+    </label></p>
+    <button type="submit" th:action="@{/admin/index}">Sign in</button>
+</form>-->
+
+<form role="form" th:action="@{/signIn}" method="post">
+    <h2>Please sign in</h2>
+    <input type="text" placeholder="Login" name="login" required="" autofocus=""/>
+    <input type="password" class="form-control" placeholder="Password" name="password" required=""/>
+    <button type="submit" th:action="@{/weather}">Sign in</button>
+</form>
+</body>
+</html>

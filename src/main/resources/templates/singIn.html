@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Request</h1>
+<form action="#" th:action="@{/singIn}" th:object="${user}" method="post">
+    <p>Entry ur login: <label>
+        <input type="text" th:field="*{login}"/>
+    </label></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Request</h1>
+<form action="#" th:action="@{/weather}" th:object="${weather}" method="post">
+    <p>City: <label>
+        <input type="text" th:field="*{city}"/>
+    </label></p>
+    <p><input type="submit" value="Submit" /></p>
+    <table border="1">
+        <tr>
+            <th>history</th>
+        </tr>
+        <tr th:each="histor : ${history}">
+            <td th:utext="${histor.history}">...</td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
